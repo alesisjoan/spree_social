@@ -2,7 +2,7 @@
   <% if (!spree_current_user || !spree_current_user.user_authentications) && Spree::AuthenticationMethod.active_authentication_methods? %>
     <h4><%= Spree.t(:sign_in_through_one_of_these_services) %></h4>
   <% end %>
-  
+  <!--
   <% if Spree::AuthenticationMethod.available_for(@spree_user).any?{|a| a.provider == "facebook"} %>
   <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -23,7 +23,7 @@
   
   
   <% end %>
-  
+  -->
   
   
   
