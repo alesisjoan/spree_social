@@ -41,4 +41,8 @@
   <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 
   <% end %>
+  <% if Spree::AuthenticationMethod.available_for(@spree_user).any?{|a| a.provider == "twitter"} %>
+  
+  
+  <% end %>
 </div>
