@@ -15,11 +15,11 @@
 <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="true" data-auto-logout-link="false"></div>
   
   <% end %>
-    <%# if Spree::AuthenticationMethod.available_for(@spree_user).any?{|a| a.provider == "twitter"} %>
+    <% if Spree::AuthenticationMethod.available_for(@spree_user).any?{|a| a.provider == "twitter"} %>
   
   
   <% end %>
-    <%# if Spree::AuthenticationMethod.available_for(@spree_user).any?{|a| a.provider == "google_oauth2"} %>
+  <% if Spree::AuthenticationMethod.available_for(@spree_user).any?{|a| a.provider == "google_oauth2"} %>
   
   
   <% end %>
@@ -29,7 +29,7 @@
   
   
   
-  <% =begin %> 
+  <!--
   <% Spree::AuthenticationMethod.available_for(@spree_user).each do |method| %>
     <%= link_to(content_tag(:i, '', class: "icon-spree-#{method.provider.to_url}-circled"),
           spree.spree_user_omniauth_authorize_url(provider: method.provider),
@@ -38,5 +38,5 @@
           
           
   <% end %>
-  <% =end %> 
+  --> 
 </div>
