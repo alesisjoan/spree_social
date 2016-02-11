@@ -16,6 +16,6 @@
   
   <% end %>
       <% if Spree::AuthenticationMethod.available_for(@spree_user).any?{|a| a.provider == "google_oauth2"} %>
-   <%= scope.function_template("google_login_button.erb") %>
+   
   <% end %>
 </div>
