@@ -9,11 +9,10 @@
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.5&appId=543296382496713";
+  js.src = "//connect.facebook.net/es_MX/sdk.js#xfbml=1&version=v2.5&appId=543296382496713";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="true" data-auto-logout-link="false"></div>
-
+<div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="true" data-auto-logout-link="true"></div>
   <% end %>
       <% if Spree::AuthenticationMethod.available_for(@spree_user).any?{|a| a.provider == "google_oauth2"} %>
     <a href="/users/auth/google_oauth2" id="google_sign_in_button" tabindex="4"><%=image_tag("btn_google_signin_dark_focus_web@2x.png", alt: "Sign in with Google")%>
