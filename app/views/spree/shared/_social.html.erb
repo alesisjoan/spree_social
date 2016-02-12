@@ -42,7 +42,7 @@
 
   <% end %>
   <% if Spree::AuthenticationMethod.available_for(@spree_user).any?{|a| a.provider == "twitter"} %>
-  
+  <a href="/auth/twitter" id="twitter_sign_in_button" type="button" name="" value="Sign in with Twitter" class="btn btn-lg btn-block" tabindex="4">
   
   <% end %>
 </div>
