@@ -3,16 +3,18 @@
   <% if (!spree_current_user || !spree_current_user.user_authentications) && Spree::AuthenticationMethod.active_authentication_methods? %>
     <h4><%= Spree.t(:sign_in_through_one_of_these_services) %></h4>
   <% end %>
+  <center>
     <% if Spree::AuthenticationMethod.available_for(@spree_user).any?{|a| a.provider == "facebook"} %>
 <a href="/users/auth/facebook" id="facebook_sign_in_button" role="button" name="" tabindex="4" class="btn">   <span class="icon-spree-facebook-circled"></span> Sign in with Facebook  </a>
   <% end %>
       <% if Spree::AuthenticationMethod.available_for(@spree_user).any?{|a| a.provider == "google_oauth2"} %>
     <a href="/users/auth/google_oauth2" id="google_sign_in_button" role="button" name="" class="btn" tabindex="4">
-  <span class="icon-spree-google-circled"></span> Sign in with Google</a>
+  <span class="icon-spree-google-oauth2-circled"></span> Sign in with Google</a>
 
   <% end %>
   <% if Spree::AuthenticationMethod.available_for(@spree_user).any?{|a| a.provider == "twitter"} %>
   <a href="/users/auth/twitter" id="twitter_sign_in_button" role="button" name="" tabindex="4" class="btn">   <span class="icon-spree-twitter-circled"></span> Sign in with Twitter  </a>
   
   <% end %>
+</center>
 </div>
