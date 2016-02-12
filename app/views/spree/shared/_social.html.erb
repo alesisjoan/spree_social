@@ -13,14 +13,15 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="true" data-auto-logout-link="false"></div>
+
   <% end %>
       <% if Spree::AuthenticationMethod.available_for(@spree_user).any?{|a| a.provider == "google_oauth2"} %>
-    <a href="/users/auth/google_oauth2" id="google_sign_in_button" role="button" name="" class="btn btn-info" tabindex="4">
-  <img src="btn_google_signin_dark_focus_web@2x.png" alt="Sign in with Google"></a>
+    <a href="/users/auth/google_oauth2" id="google_sign_in_button" tabindex="4">
+  <img src="../../assets/images/btn_google_signin_dark_focus_web@2x.png" alt="Sign in with Google"></a>
 
   <% end %>
   <% if Spree::AuthenticationMethod.available_for(@spree_user).any?{|a| a.provider == "twitter"} %>
-  <a href="/users/auth/twitter" id="twitter_sign_in_button" role="button" name="" tabindex="4">   <img src="sign-in-with-twitter-gray.png" alt="Sign in with Twitter">
+  <a href="/users/auth/twitter" id="twitter_sign_in_button" name="" tabindex="4">   <img src="../../assets/images/sign-in-with-twitter-gray.png" alt="Sign in with Twitter">
   </a>
   
   <% end %>
