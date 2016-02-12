@@ -7,22 +7,19 @@
                 <% if Spree::AuthenticationMethod.available_for(@spree_user).any?{|a| a.provider == "facebook"} %>
                     <a href="/users/auth/facebook" id="facebook_sign_in_button" role="button" name="" tabindex="4" class="btn  btn-default btn-block">
                         <span class="icon-spree-facebook-circled">
-                        </span>
-                        Sign in with Facebook
+                        </span><span> Sign in with Facebook</span>
                     </a>
                     <% end %>
                         <% if Spree::AuthenticationMethod.available_for(@spree_user).any?{|a| a.provider == "google_oauth2"} %>
                             <a href="/users/auth/google_oauth2" id="google_sign_in_button" role="button" name="" class="btn  btn-default btn-block" tabindex="4">
                                 <span class="icon-spree-google-oauth2-circled">
-                                </span>
-                                Sign in with Google
+                                </span><span> Sign in with Google</span>
                             </a>
                             <% end %>
                                 <% if Spree::AuthenticationMethod.available_for(@spree_user).any?{|a| a.provider == "twitter"} %>
                                     <a href="/users/auth/twitter" id="twitter_sign_in_button" role="button" name="" tabindex="4" class="btn btn-default btn-block">
                                         <span class="icon-spree-twitter-circled">
-                                        </span>
-                                        Sign in with Twitter
+                                        </span><span> Sign in with Twitter</span>
                                     </a>
                                     <% end %>
                                     </div>
