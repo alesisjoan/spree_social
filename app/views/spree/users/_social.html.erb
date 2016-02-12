@@ -10,12 +10,12 @@
               <div class="provider col-md-2">
                 <%= content_tag(:i, '', class: "icon-spree-#{user_authentication.provider.to_url}-circled") %>
                 <%= user_authentication.provider %>
-              </div>
+              </div><!--
               <div class="uid col-md-3">
                 <%= user_authentication.uid %>
-              </div>
+              </div>-->
               <div class="col-md-2">
-                <%= link_to user_authentication, data: { confirm: "#{Spree.t(:remove_authentication_option_confirmation)}" }, method: :delete, class: 'btn btn-default' do %>
+                <%= link_to user_authentication, data: { confirm: "#{Spree.t(:remove_authentication_option_confirmation)}" }, method: :delete, class: 'btn btn-default', "data-role" => "button" do %>
                   <%= content_tag(:i, '', class: 'icon-delete') %>
                 <% end %>
               </div>
