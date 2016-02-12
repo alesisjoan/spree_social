@@ -2,6 +2,8 @@ SpreeSocial::OAUTH_PROVIDERS.each do |provider|
   SpreeSocial.init_provider(provider[1])
 end
 
+config.omniauth :twitter, 'gW9eV5SvhnJGoeR9UCiOo0ebe', '5mgLwqpQyRVlgdIHA19CYULYgCTjRQRQLEEida5VgHVs0lm40P', {:scope => 'offline_access,email'}
+
 OmniAuth.config.logger = Logger.new(STDOUT)
 OmniAuth.logger.progname = 'omniauth'
 
